@@ -1,127 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Radish's Evasion</title>
-	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- header font -->
-  <link href="//fonts.googleapis.com/css?family=Times+New+Roman" rel="stylesheet" type="text/css">
-  
-  <!-- body font -->
-  <link href="//fonts.googleapis.com/css?family=Times+New+Roman" rel="stylesheet" type="text/css">
-  
-  <style type="text/css">
-  
-    /* fonts */
-    body { font-family: 'Times New Roman', arial, serif;  letter-spacing: 1px;}
-    h1 { font-family: 'Times New Roman', arial, serif; letter-spacing: 2px;}
-    h2, h3, h4, h5, h6 { letter-spacing: 2px; font-weight: normal;}
-  
-    /* colors */
-    body { background-color: #0000ff; color: white;}
-    .container { background-color: #0000ff; border-color: #0000ff}
-    a { color: #62BECB; }
-    a:hover {color: #82DEEB }
-
-	#error {  border:1px dotted white; background: brown; }
-    
-    /* stripes and borders */
-    
-    .main { background-repeat: repeat-x;  background-image: url(https://lh3.googleusercontent.com/proxy/BeyPi8pi9OQArvLUdS1lBjHoDmDC3vIuk-zX1TjOct3Gznl6IOuuD0hoHw6Cm7KvEs2jGKnJ3MWNu0apDXIeK8rzyulUokI); }
-    .footer { min-height: 60px; background-repeat: repeat-x; background-position: bottom left; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA8CAIAAAAfXYiZAAAB+ElEQVR4nO3b11aDQBSF4T2IXWM3lhfxTt//PWKvsTfwIllLEobQZuZsYM4DyFkffyKBRJ2encBPsQmlF9BNHEtvoBul+LBiAEp6idQogK0sRdlUrMYnjwhLUTYVJzZiwQoom4rUxMmjwAoom4pSG8ljzTEmhV/duQucrzExDZKCbFkhpdRP9vuBWFmNk4JUWfOUUt95/2MEymqoFNyXtUAp9VXsusVpWY2WgsuyFimlPstcCzsqqwVScIPVDik4eBkuUUp9VPokaresNknBalnLlFLvNe5u2CqrfVKwVNYKpdRb7Ttm5stqqxSMl7VKKfVq6C6sybLaLQWDZa1RSr0YvbNvpqwuSMFIWeuUUs8WnhbVLas7UqhZVo9SamjtCWR1rF5kcA1jM7T5Ybfi3+6gFKqVtUEp9WT/1lzpI3RWCmXL2qSUenT11KXEcTouheJlbVFKPbh9RlzoaF5qNPllbVNK3Ut8oyXnmF4qObPK2qGUupP7/l3mkb1UevRl7VJK3Qp/p1NXlpfKmumy9iilbgikMFWWl5o9/4t4qdwZvwz3KaWumaQwKstLFZywTyl1xScF8Z+jaIdTqh8hZPsx1iWl1EEEsJXFLAUwlXVBKXWYeE9nWZBfCiRlnVNKHaWuE+TXbIoUxMsaUEodZ1x7Si7bLCkAf1M7eHbSdYGuAAAAAElFTkSuQmCC); }
-    .container { border-style: solid; border-width: 1px; border-radius: 10px;  -moz-border-radius: 10px;  -webkit-border-radius: 10px;  overflow:hidden;  /* otherwise the background image appears on top of the curved border */ }
-    
-    
-    /* layout */
-    body { text-align: center; }
-    .container { width: 760px; margin: 40px auto; text-align: left;  max-width: calc(100% - 10px);}
-    
-    h2, h3, h4, h5, h6 { margin-bottom: 0;  }
-    ul { line-height: 150%; }
-    ul, p {  margin-top: 5px; margin-bottom: 0; }
-    .main, .footer { padding: 1px 10px 0 10px; }
-    
-    #error {display: none; padding: 5px 10px; margin: 30px 10px; }
-    
-    form ul { list-style-type: none; padding-left: 25px;}
-    input[type=text] { width: 640px; max-width: calc(100% - 8em) }
-    
-    .footer { position: relative; clear: both;}
-    .footer p { margin:0; position: absolute; bottom: 10px;  right: 10px; padding-left: 10px; }
-    
-    #google-ad {
-        text-align: center;
-        margin: 10px auto;
-    }
-    @media(min-width: 768px) {
-        #google-ad {
-            margin: 0;
-            float:right; 
-            margin:4px 2px 2px 20px;
-        }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-  
-    <div class="main">
-  
-      <h1>Node Unblocker</h1>
-      
-      <div id="error"></div>
-
-      <form action="no-js" method="get" id="unblocker-form">
-        <p>
-          URL: 
-          <input type="text" id="url" name="url" autofocus="autofocus" />
-          <input type="submit" value="Go" />
-        </p>
-
-      </form>
-      
-
-      <h3>About Radish's Evade</h3>
-      <p>Radish's Evade is a web proxy, similar to CGIProxy, PHProxy, or Glype, that allows users to evade filters and censorship and access blocked websites. </p>
-     
-    </div>
-  
-  </div>
-	<script>
-		function $(id){
-			return document.getElementById(id);
-		}
-		
-		$('unblocker-form').onsubmit = function(){
-			var url = $('url').value;
-			if(url.substr(0,4) != "http"){
-				url = "http://" + url;
+	<head>
+		<title>Radish's Evasion</title>
+		<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<h1>IpSim</h1>
+				<div id="error"></div>
+				<form action="no-js" method="get" id="unblocker-form">
+					<p>
+						URL: 
+						<input type="text" id="url" name="url" autofocus="autofocus" />
+						<input type="submit" value="Go" />
+					</p>
+				</form>
+				<h3>About Radish's IpSim</h3>
+				<p>Radish's ipsim is a tool for students and researchers find resources and papers for various projects. The goal of this tool is to allow students and researchers more effectively learn.</p>
+			</div>
+		</div>
+		<script>
+			function $(id){
+				return document.getElementById(id);
 			}
-			window.location.pathname = 'proxy/' + url;
-			return false;
-		};
-		
-		function checkError(){
-			var search = window.location.search;
-			var start = search.indexOf('error=');
-			if(start > -1){
-				var stop = search.indexOf('&', start);
-				if(stop == -1){ stop = undefined; }
-				// +6 for "error="
-				var err = search.substr(start+6, stop);
-                var $error = $('error');
-				$error.innerText = $error.textContent = decodeURIComponent(err);
-				$error.style.display = "block";
+			
+			$('unblocker-form').onsubmit = function(){
+				var url = $('url').value;
+				if(url.substr(0,4) != "http"){
+					url = "http://" + url;
+				}
+				window.location.pathname = 'proxy/' + url;
+				return false;
+			};
+			
+			function checkError(){
+				var search = window.location.search;
+				var start = search.indexOf('error=');
+				if(start > -1){
+					var stop = search.indexOf('&', start);
+					if(stop == -1){ stop = undefined; }
+					// +6 for "error="
+					var err = search.substr(start+6, stop);
+			              var $error = $('error');
+					$error.innerText = $error.textContent = decodeURIComponent(err);
+					$error.style.display = "block";
+				}
 			}
-		}
-    
-		window.onload = function() { 
-			$('url').focus(); 
-			checkError(); 
-		}
-	</script>
-  
-  
-</body>
+			  
+			window.onload = function() { 
+				$('url').focus(); 
+				checkError(); 
+			}
+		</script>
+	</body>
 </html>
