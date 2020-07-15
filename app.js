@@ -53,7 +53,7 @@ function googleAnalyticsMiddleware(data) {
 }
 
 var unblockerConfig = {
-    prefix: '/ipsim/',
+    prefix: '/IpSim/',
     responseMiddleware: [
         googleAnalyticsMiddleware
     ]
